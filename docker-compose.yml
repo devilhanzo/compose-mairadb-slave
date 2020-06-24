@@ -1,0 +1,23 @@
+version: '3'
+services:
+  mariadb:
+    image: mariadb
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./my.cnf:/etc/mysql/my.cnf
+      - mysql_data:/var/lib/mysql
+      - ./import:/root
+    networks:
+      - bridge
+    environment:
+      - MYSQL_ROOT_PASSWORD=@lkilogmL
+      - TZ=Asia/Bangkok
+    restart: always
+
+volumes:
+  mysql_data:
+
+networks:
+  bridge:
+    driver: bridge
