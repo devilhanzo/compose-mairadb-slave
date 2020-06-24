@@ -11,7 +11,7 @@ services:
     networks:
       - bridge
     environment:
-      - MYSQL_ROOT_PASSWORD=@lkilogmL
+      - MYSQL_ROOT_PASSWORD=ChangeMe
       - TZ=Asia/Bangkok
     restart: always
 
